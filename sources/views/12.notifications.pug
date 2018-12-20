@@ -1,0 +1,41 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'NOTIFICATIONS'
+block header
+  .b__header--content
+    .row.middle
+      .col.md__7
+        h1.page--title Notifications
+        p P - From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly. slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.
+block content
+  .notifications__list
+    -for(i=1;i<=2;i++)
+      .message
+        .message__label.text__info
+          svg(): use(xlink:href="#info-icon")
+          span Info icon
+        h4.message__title: a(href="") Info notification
+        .message__text P - From troubled dreams, he found himself trpansformed. 
+        .message__time 21m
+      .message
+        .message__label.text__warning
+          svg(): use(xlink:href="#warning-icon")
+          span Warning icon
+        h4.message__title: a(href="") Warning notification
+        .message__text P - From troubled dreams, he found himself trpansformed. Lorem ipsum dolor sit amet himself to ...
+        .message__time 6h
+      .message
+        .message__label.text__success
+          svg(): use(xlink:href="#success-icon")
+          span Success icon
+        h4.message__title Success notification
+        .message__text P - From troubled dreams, he found himself trpansformed. 
+        .message__time 11.1.2018
+      .message
+        .message__label.text__danger
+          svg(): use(xlink:href="#danger-icon")
+          span Danger icon
+        h4.message__title: a(href="") Danger notification
+        .message__text P - From troubled dreams, he found himself trpansformed. 
+        .message__time 10.12.2018
+    .readmore: a(href="").btn.ghost View all

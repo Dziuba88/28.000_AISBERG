@@ -1,0 +1,30 @@
+extends layouts/signLayout
+block variables
+  - var pageTitle = 'SIGN IN'
+block form
+  .form__sign: .container
+    .row
+      .col.md__8.md__2--offset
+        h1 
+          span Sign In
+          small
+            svg(): use(xlink:href='#logo-icon')
+        p.text__darkgrey From troubled dreams, he found himself transformed in phis bed into a horrible vermin.
+        .form__row
+          label Uspername or email
+          input(type="text", placeholder="Enter your username or email here")
+        .form__row
+          label Password
+          input(type="password", placeholder="Enter your password here")
+        .form__row: a(href="") Forgot password?
+        .form__sign--ctrl
+          .col: .checkbox
+            input#remember(type="checkbox")
+            label(for="remember")
+              span.icon: svg(): use(xlink:href='#checkbox-icon')
+              span.label Remeber me
+          .col: button.btn.cta Continue
+        p.text__center
+          span Don't have an account yet? 
+          strong.text__upper: a(href="").cta SIGN UP now
+

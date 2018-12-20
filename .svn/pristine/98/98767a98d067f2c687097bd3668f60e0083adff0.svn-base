@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-config" content="favicons/browserconfig.xml"/>
+    <meta name="theme-color" content="#ff365c"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ff365c"/>
+    <link rel="shortcut icon" href="favicons/favicon.ico"/>
+    <title>AISBERG :: PROFILE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Noto+Sans:400,700&amp;amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body class="b__layout">
+    <div id="preloader"><img src="img/preloader.svg" alt=""/></div>
+    <div class="b__layout--header">
+      <button data-toggle="sidebar">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button>
+      <button data-toggle="offcanvas">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button><a class="brand" href="./">
+        <svg>
+          <use xlink:href="#logo"></use>
+        </svg></a>
+      <div class="separator"></div>
+      <div class="nav">
+        <ul>
+          <li class="dropdown messages">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#bell"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <div class="message__list" data-scrollbar="horizontal">
+                <div class="message">
+                  <div class="message__label text__info">
+                    <svg>
+                      <use xlink:href="#info-icon"></use>
+                    </svg><span>Info icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Info notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__warning">
+                    <svg>
+                      <use xlink:href="#warning-icon"></use>
+                    </svg><span>Warning icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Warning notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__success">
+                    <svg>
+                      <use xlink:href="#success-icon"></use>
+                    </svg><span>Success icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Success notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__danger">
+                    <svg>
+                      <use xlink:href="#danger-icon"></use>
+                    </svg><span>Danger icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Danger notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+              </div>
+              <div class="readmore"><a class="btn ghost" href="">View all</a></div>
+            </div>
+          </li>
+          <li class="dropdown user">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#user"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <ul>
+                <li class="user__mail">vasilii_constantinopoliskii@gmail.com</li>
+                <li class="user__menu unstyled"><a href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Profile</span></a></li>
+                <li class="user__menu"><a href="">
+                    <svg>
+                      <use xlink:href="#settings"></use>
+                    </svg><span>Settings</span></a></li>
+                <li class="user__exit"><a href="">Exit</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--aside">
+      <div class="aside__menu" data-scrollbar="horizontal">
+        <ul>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#finance-icon"></use>
+              </svg><span>Finance</span></a></li>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#security-icon"></use>
+              </svg><span>Security</span></a></li>
+          <li class="current open" data-collapse="signals"><a data-show="signals">
+              <svg class="icon">
+                <use xlink:href="#signals-icon"></use>
+              </svg><span>Signals</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li class="current"><a href=""><span>All</span></a></li>
+              <li><a href=""><span>Popular</span><small>35%/mo</small></a></li>
+              <li><a href=""><span>DOMinance</span><small>135%/mo</small></a></li>
+              <li><a href=""><span>News Thrpottle</span><small>35%/mo</small></a></li>
+            </ul>
+          </li>
+          <li data-collapse="viewed"><a data-show="viewed">
+              <svg class="icon">
+                <use xlink:href="#viewed-icon"></use>
+              </svg><span>Last Viewed</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li><a href=""><span>DOMinance</span></a></li>
+              <li><a href=""><span>Lafaet Cron </span></a></li>
+              <li><a href=""><span>News Thrpottle</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--content" data-scrollbar="horizontal">
+      <div class="flex__column">
+        <div class="b__header">
+          <div class="b__header--content">
+            <h1 class="page--title">Profile</h1>
+            <div class="b__header--navs">
+              <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Verification</a></li>
+                <li><a class="active" href="">Security</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="b__main">
+          <div class="panel">
+            <h3 class="panel__header">
+              <svg class="icon">
+                <use xlink:href="#lock-icon"></use>
+              </svg><span class="title">Security</span>
+            </h3>
+            <div class="profile__security">
+              <div class="row">
+                <div class="col md__8 xl__5">
+                  <h4>Secondary Email</h4>
+                  <p class="text__darkgrey">You have to also the residential address to receive payments will confirm a sva the personality for this purpose load a photo of docupments.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col md__5 xl__3">
+                  <div class="form__row">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your secondary email here"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn cta">submit</button>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+              <div class="row">
+                <div class="col md__8 xl__5">
+                  <h4>Change Password</h4>
+                  <p class="text__darkgrey">You have to also the residential address to receive payments will confirm a sva the personality for this purpose load a photo of docupments.</p>
+                </div>
+              </div><a class="btn cta" href="">Change your password</a>
+            </div>
+          </div>
+        </div>
+        <div class="b__footer">
+          <p>Aisberg will be listed on major exchanges. See details at <a>CoinMarketCap</a> and <a>Block.cc</a></p>
+          <p>Copyright 2018. Aisberg.com <a>Privacy Polycy</a> | <a>Terms & Conditions</a> | <a>F.A.Q.</a> | <a>News</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

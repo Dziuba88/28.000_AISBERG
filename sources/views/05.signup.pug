@@ -1,0 +1,21 @@
+extends layouts/signLayout
+block variables
+  - var pageTitle = 'SIGN UP'
+block form
+  .form__sign: .container
+    .row
+      .col.md__8.md__2--offset
+        h1 
+          span Sign Up
+          small
+            svg(): use(xlink:href='#logo-icon')
+        p.text__darkgrey From troubled dreams, he found himself transformed in phis bed into a horrible vermin.
+        .form__row
+          label Email
+          input(type="email", placeholder="Enter your email here")
+        .form__sign--ctrl
+          .col.text__right: button.btn.cta submit
+        p.text__center
+          span Already have an account? 
+          strong.text__upper: a(href="").cta SIGN in
+

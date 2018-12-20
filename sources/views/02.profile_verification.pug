@@ -1,0 +1,182 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'PROFILE'
+block header
+  .b__header--content
+    h1.page--title Profile
+    .b__header--navs: ul
+      li(): a(href="") Profile
+      li(): a(href="").active Verification
+      li(): a(href="") Security
+block content
+  .panel
+    h3.panel__header
+      svg.icon: use(xlink:href="#account-icon")
+      span.title Verification 
+    .profile__verification 
+      p You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format
+      .profile__verification--status.warning 
+        svg(): use(xlink:href="#warning-icon")
+        span <strong>Warning!</strong> You do not have KYC
+      .row
+        .col.md__6: .profile__verification--form
+          h4 1. Identification document with photo
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p: img(src="img/doc_photo.png", alt="")
+          .form__row
+            label Document photo:
+            select
+              option(value="driver__license") The driver's license from two sides
+              option(value="id__card") ID card from two sides
+              option(value="passport") Passport from two sides
+          .form__row: .fileinput
+            input#photoDocFront(type="file", accept=".png, .jpg, .jpeg")
+            span.fileinput__selected ID front side image
+            label(for="photoDocFront").btn.outline Browse
+          .form__row: .fileinput
+            input#photoDocBack(type="file", accept=".png, .jpg, .jpeg")
+            span.fileinput__selected ID back side image
+            label(for="photoDocBack").btn.outline Browse
+        .col.md__6: .profile__verification--form
+          h4 2. The document confirming the residence
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p: img(src="img/doc_order.png", alt="")
+          .form__row
+            label The document confirming the residence:
+            select
+              option(value="receipt__rent") The receipt for a rent
+              option(value="utility__bill") Utility Bill
+              option(value="bank__certificate") Bank Certificate
+              option(value="any__other") Other
+          .form__row: .fileinput
+            input#orderDoc(type="file", accept=".png, .jpg, .jpeg")
+            span.fileinput__selected Front side image
+            label(for="orderDoc").btn.outline Browse
+      .profile__verification--footer: button.btn.cta submit to verification
+
+  .panel
+    h3.panel__header
+      svg.icon: use(xlink:href="#account-icon")
+      span.title Verification 
+    .profile__verification 
+      p You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format
+      .profile__verification--status.warning 
+        svg(): use(xlink:href="#warning-icon")
+        span <strong>Warning!</strong> Your personal data is verefying
+      .row
+        .col.md__6: .profile__verification--form
+          h4 1. Identification document with photo
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p(): img(src="img/doc_photo.png", alt="")
+          .verifying
+            .profile__verification--status.info 
+              svg(): use(xlink:href="#timelapse-icon")
+              span Verifing
+            .verifying__type The driver's license from two parts
+            .verifying__file: a(data-mds="docPhotoFront") Front.png
+            .verifying__file: a(data-mds="docPhotoBack") Back.png 
+
+        .col.md__6: .profile__verification--form
+          h4 2. The document confirming the residence
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p: img(src="img/doc_order.png", alt="")
+          .verifying
+            .profile__verification--status.info 
+              svg(): use(xlink:href="#timelapse-icon")
+              span Verifing
+            .verifying__type The receipt for a rent bill
+            .verifying__file: a(data-mds="docOrder") Front.png
+
+      .profile__verification--footer: button.btn.cta(disabled) submit to verification
+
+  .panel
+    h3.panel__header
+      svg.icon: use(xlink:href="#account-icon")
+      span.title Verification 
+    .profile__verification 
+      p You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format
+      .profile__verification--status.danger 
+        svg(): use(xlink:href="#danger-icon")
+        span <strong>Rejected!</strong> Your personal bill data rejected
+      .row
+        .col.md__6: .profile__verification--form
+          h4 1. Identification document with photo
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p(): img(src="img/doc_photo.png", alt="")
+          .verifying
+            a.delete(data-mds="confirmDelete"): svg(): use(xlink:href="#delete-icon")
+            .profile__verification--status.success 
+              svg(): use(xlink:href="#success-icon")
+              span Verified
+            .verifying__type The driver's license from two parts
+            .verifying__file: a(data-mds="docPhotoFront") Front.png
+            .verifying__file: a(data-mds="docPhotoBack") Back.png 
+
+        .col.md__6: .profile__verification--form
+          h4 2. The document confirming the residence
+          p.text__darkgrey You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment
+          p: img(src="img/doc_order.png", alt="")
+          .verifying
+            .profile__verification--status.danger 
+              svg(): use(xlink:href="#danger-icon")
+              span Rejected
+                small P small From troubled dreams, he found himself transformed<br>in his bed into a horrible vermin. He lay on his armour-like<br>back, and if he lifted his head a little he could see hips brown 
+            .verifying__type The receipt for a rent bill
+            .verifying__file: a(data-mds="docOrder") Front.png
+            button.btn.cta(data-mds="confirmDelete") Upload new file
+
+      .profile__verification--footer: button.btn.cta(disabled) submit to verification
+
+  .panel
+    h3.panel__header
+      svg.icon: use(xlink:href="#account-icon")
+      span.title Verification 
+    .profile__verification 
+      p You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format
+      .row
+        .col.md__6: .profile__verification--form
+          .verifying.verified
+            .profile__verification--status.success 
+              svg(): use(xlink:href="#success-icon")
+              span Verified
+            .verifying__type The driver's license from two parts
+            .verifying__file: a(data-mds="docPhotoFront") Front.png
+            .verifying__file: a(data-mds="docPhotoBack") Back.png 
+
+        .col.md__6: .profile__verification--form
+          .verifying.verified
+            .profile__verification--status.success 
+              svg(): use(xlink:href="#success-icon")
+              span Verified
+            .verifying__type The receipt for a rent bill
+            .verifying__file: a(data-mds="docOrder") Front.png
+
+      //.profile__verification--footer: button.btn.cta(disabled) submit to verification
+
+block modals
+  .modal(data-modal="docPhotoFront" data-scrollbar="horizontal")
+    .modal__backdrop(data-close="modal")
+    .modal__image
+      button.close(data-close="modal"): svg(): use(xlink:href="#close-icon")
+      img(src="https://placeimg.com/640/480/people", alt="")
+  .modal(data-modal="docPhotoBack" data-scrollbar="horizontal")
+    .modal__backdrop(data-close="modal")
+    .modal__image
+      button.close(data-close="modal"): svg(): use(xlink:href="#close-icon")
+      img(src="https://placeimg.com/1200/2048/nature", alt="")
+  .modal(data-modal="docOrder" data-scrollbar="horizontal")
+    .modal__backdrop(data-close="modal")
+    .modal__image
+      button.close(data-close="modal"): svg(): use(xlink:href="#close-icon")
+      img(src="https://placeimg.com/1024/768/arch", alt="")
+  .modal(data-modal="confirmDelete" data-scrollbar="horizontal")
+    .modal__backdrop(data-close="modal")
+    .modal__confirm
+      svg.modal__confirm--back.text__warning: use(xlink:href="#warning-icon")
+      button.close(data-close="modal"): svg(): use(xlink:href="#close-icon")
+      .modal__confirm--body
+        h2.text__warning Warning
+        p.text__darkgrey From troubled dreams, he found himself transformed in his bed into a horrible vermin.
+        .btn__group
+          .btn.cta delete 
+          .btn.outline(data-close="modal") cancel 

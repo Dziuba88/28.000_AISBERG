@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-config" content="favicons/browserconfig.xml"/>
+    <meta name="theme-color" content="#ff365c"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ff365c"/>
+    <link rel="shortcut icon" href="favicons/favicon.ico"/>
+    <title>AISBERG :: SIGNAL PAGE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Noto+Sans:400,700&amp;amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body class="b__layout">
+    <div id="preloader"><img src="img/preloader.svg" alt=""/></div>
+    <div class="b__layout--header">
+      <button data-toggle="sidebar">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button>
+      <button data-toggle="offcanvas">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button><a class="brand" href="./">
+        <svg>
+          <use xlink:href="#logo"></use>
+        </svg></a>
+      <div class="separator"></div>
+      <div class="nav">
+        <ul>
+          <li class="dropdown messages">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#bell"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <div class="message__list" data-scrollbar="horizontal">
+                <div class="message">
+                  <div class="message__label text__info">
+                    <svg>
+                      <use xlink:href="#info-icon"></use>
+                    </svg><span>Info icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Info notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__warning">
+                    <svg>
+                      <use xlink:href="#warning-icon"></use>
+                    </svg><span>Warning icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Warning notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__success">
+                    <svg>
+                      <use xlink:href="#success-icon"></use>
+                    </svg><span>Success icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Success notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__danger">
+                    <svg>
+                      <use xlink:href="#danger-icon"></use>
+                    </svg><span>Danger icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Danger notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+              </div>
+              <div class="readmore"><a class="btn ghost" href="">View all</a></div>
+            </div>
+          </li>
+          <li class="dropdown user">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#user"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <ul>
+                <li class="user__mail">vasilii_constantinopoliskii@gmail.com</li>
+                <li class="user__menu unstyled"><a href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Profile</span></a></li>
+                <li class="user__menu"><a href="">
+                    <svg>
+                      <use xlink:href="#settings"></use>
+                    </svg><span>Settings</span></a></li>
+                <li class="user__exit"><a href="">Exit</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--aside">
+      <div class="aside__menu" data-scrollbar="horizontal">
+        <ul>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#finance-icon"></use>
+              </svg><span>Finance</span></a></li>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#security-icon"></use>
+              </svg><span>Security</span></a></li>
+          <li class="current open" data-collapse="signals"><a data-show="signals">
+              <svg class="icon">
+                <use xlink:href="#signals-icon"></use>
+              </svg><span>Signals</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li class="current"><a href=""><span>All</span></a></li>
+              <li><a href=""><span>Popular</span><small>35%/mo</small></a></li>
+              <li><a href=""><span>DOMinance</span><small>135%/mo</small></a></li>
+              <li><a href=""><span>News Thrpottle</span><small>35%/mo</small></a></li>
+            </ul>
+          </li>
+          <li data-collapse="viewed"><a data-show="viewed">
+              <svg class="icon">
+                <use xlink:href="#viewed-icon"></use>
+              </svg><span>Last Viewed</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li><a href=""><span>DOMinance</span></a></li>
+              <li><a href=""><span>Lafaet Cron </span></a></li>
+              <li><a href=""><span>News Thrpottle</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--content" data-scrollbar="horizontal">
+      <div class="flex__column">
+        <div class="b__header">
+          <div class="b__header--content">
+            <div class="row">
+              <div class="col md__6">
+                <h1 class="page--title">DOMinance
+                  <div class="tooltip">
+                    <svg class="tooltip__icon">
+                      <use xlink:href="#info-icon"></use>
+                    </svg>
+                    <div class="tooltip__menu">
+                      <div class="tooltip__menu--title">h4 size 17px/20px</div>
+                      <div class="tooltip__menu--text">p - From troubled dreams, <a href="">he found himself transformed</a> in his bed into a horrible vermin. He lay on his </div>
+                    </div>
+                  </div>
+                </h1>
+                <p>P - From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted</p>
+              </div>
+              <div class="col md__6">
+                <div class="signals__filters">
+                  <div class="form__row">
+                    <select>
+                      <option data-display="Currencies"> </option>
+                      <option value="01" selected="selected">BTC/USDT</option>
+                      <option value="02">Currencies 2</option>
+                      <option value="03">Currencies 3</option>
+                      <option value="04">Currencies 4</option>
+                    </select>
+                  </div>
+                  <div class="form__row">
+                    <select>
+                      <option data-display="Timeframe"> </option>
+                      <option value="01" selected="selected">M1</option>
+                      <option value="02">Timeframe 2</option>
+                      <option value="03">Timeframe 3</option>
+                      <option value="04">Timeframe 4</option>
+                    </select>
+                  </div>
+                  <div class="form__row">
+                    <select>
+                      <option data-display="Stock"> </option>
+                      <option value="01" selected="selected">Binance</option>
+                      <option value="02">Stock 2</option>
+                      <option value="03">Stock 3</option>
+                      <option value="04">Stock 4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="b__header--navs">
+              <ul>
+                <li><a class="active" href="">All Signals</a></li>
+                <li><a href="">Popular</a></li>
+                <li><a href="">Subscribed</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="b__main">
+          <div class="signal__page">
+            <div class="panel collapsible">
+              <div class="panel__close">
+                <svg>
+                  <use xlink:href="#close-icon"></use>
+                </svg>
+              </div>
+              <h3 class="panel__header">Get more AIsberg DOMinance prediction signals</h3>
+              <div class="row">
+                <div class="col sm__3 xs__6">
+                  <div class="plan">
+                    <div class="plan__title">M1</div>
+                    <div class="plan__info">For Free </div>
+                  </div>
+                </div>
+                <div class="col sm__3 xs__6">
+                  <div class="plan">
+                    <div class="plan__title">M5</div>
+                    <div class="plan__info"> <strong class="text__cta">$100/mo</strong><span>&nbsp;or&nbsp;</span><strong class="text__cta">10 AIS/mo</strong></div><a class="btn cta" href="">subscribe</a>
+                  </div>
+                </div>
+                <div class="col sm__3 hide__mobile">
+                  <div class="plan">
+                    <div class="plan__title">M15</div>
+                    <div class="plan__info"> <strong class="text__cta">$100/mo</strong><span>&nbsp;or&nbsp;</span><strong class="text__cta">10 AIS/mo</strong></div><a class="btn cta" href="">subscribe</a>
+                  </div>
+                </div>
+                <div class="col sm__3 hide__mobile">
+                  <div class="plan">
+                    <div class="plan__title">M15</div>
+                    <div class="plan__info"> <strong class="text__cta">$100/mo</strong><span>&nbsp;or&nbsp;</span><strong class="text__cta">10 AIS/mo</strong></div><a class="btn cta" href="">subscribe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col md__8 xl__9">
+                <div class="panel">
+                  <h3 class="panel__header">BTC/USDT, M1, Binance</h3>
+                  <div id="chart_candle"></div>
+                </div>
+              </div>
+              <div class="col md__4 xl__3">
+                <div class="panel performance">
+                  <h3 class="panel__header">Performance</h3>
+                  <div class="performance__price"><small>Predicted Price</small>
+                    <h1 class="text__cta">5000.5555</h1>
+                    <h4>USDT</h4>
+                  </div>
+                  <div class="performance__probability">
+                    <svg>
+                      <use xlink:href="#thumb-icon"></use>
+                    </svg>
+                    <h2>BUY</h2><span><strong class="text__success">95.6%</strong><small>Probability</small></span>
+                  </div>
+                  <div class="performance__list"><span>Accuracy</span><strong>95.6%</strong><span>profit /mo</span><strong>125.5%</strong><span>Signals</span><strong>12.252</strong></div>
+                </div>
+              </div>
+              <div class="col md__8 xl__9">
+                <div class="panel signal">
+                  <h3 class="panel__header">AI Signal</h3>
+                  <div class="signal__predicted"><span>Predicted Price Change</span>
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><strong class="text__success">0.57%</strong>
+                  </div>
+                  <div id="chart_ai"></div>
+                  <div class="signal__predicted--legend"><span class="stock">BTC / USDT, M1, Binance</span><span class="cta">Accurate Predictions</span><span class="darkgrey">Missed Predictions</span><span class="info">Real Price</span></div>
+                </div>
+                <div class="panel signal">
+                  <h3 class="panel__header">DOMingance Prediction Accuracy</h3>
+                  <div class="signal__predicted"><span>Prediction Rate</span>
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><strong class="text__success">1.32%</strong>
+                  </div>
+                  <div id="chart_pred"></div>
+                  <div class="signal__predicted--legend"><span class="stock">BTC / USDT, M1, Binance</span><span class="cta">Inaccurate Prediction</span><span class="success">Accurate Predictions</span></div>
+                </div>
+              </div>
+              <div class="col md__4 xl__3">
+                <div class="panel history">
+                  <h3 class="panel__header">Signal History</h3>
+                  <div class="history__date">2018 Mar 21</div>
+                  <div class="history__item">
+                    <div class="history__item--time">08:45</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#up-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__success">95.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">08:30</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#down-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__danger">35.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">08:15</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#up-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__success">95.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">08:00</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#down-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__danger">35.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">07:45</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#up-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__success">95.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">07:30</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#down-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__danger">35.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">07:15</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#up-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__success">95.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">07:00</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#down-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__danger">35.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">06:45</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#up-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__success">95.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__item">
+                    <div class="history__item--time">06:30</div>
+                    <div class="history__item--status">
+                      <svg>
+                        <use xlink:href="#down-icon"></use>
+                      </svg>
+                    </div>
+                    <div class="history__item--data">
+                      <div class="value"> <span class="text__darkgrey">6545.4545 - </span><strong>6545.0545 </strong></div>
+                      <div class="perc text__danger">35.5%</div>
+                    </div>
+                  </div>
+                  <div class="history__footer"><a class="btn ghost" href="">Learn More</a></div>
+                </div>
+              </div>
+            </div>
+            <h2 class="block__header">Also need to see</h2>
+            <div class="row">
+              <div class="col lg__3 sm__6">
+                <div class="panel signal">
+                  <svg class="signal__icon">
+                    <use xlink:href="#robot-dom"></use>
+                  </svg>
+                  <h3 class="panel__header"><a href="">DOMinance, Binance, M5, BTC/USDT</a></h3>
+                  <p>Based on News agrigation and analisys, macroeconomical factors, ecomonical reports</p>
+                  <div class="signal__type">ANN type Convolutional</div>
+                  <div class="signal__alert success">Alert</div>
+                  <div class="signal__info">
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><span class="text__darkgrey">6545.4500</span><span class="text__darkgrey">-</span><span>6545.0500 </span><strong class="text__success">95.5%</strong>
+                  </div>
+                  <div class="signal__chart">
+                    <div class="row middle">
+                      <div class="col xs__7">
+                        <div class="signal__chart--item" id="chart_0"></div>
+                      </div>
+                      <div class="col xs__5">
+                        <div class="signal__chart--info"><strong class="text__success">95.6%</strong><span>Accuracy</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signal__footer"><span>Subscribed till:</span><strong>19.02.2018</strong></div>
+                </div>
+              </div>
+              <div class="col lg__3 sm__6">
+                <div class="panel signal">
+                  <svg class="signal__icon">
+                    <use xlink:href="#robot-dom"></use>
+                  </svg>
+                  <h3 class="panel__header"><a href="">DOMinance, Binance, M5, BTC/USDT</a></h3>
+                  <p>Based on News agrigation and analisys, macroeconomical factors, ecomonical reports</p>
+                  <div class="signal__type">ANN type Convolutional</div>
+                  <div class="signal__alert success">Alert</div>
+                  <div class="signal__info">
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><span class="text__darkgrey">6545.4500</span><span class="text__darkgrey">-</span><span>6545.0500 </span><strong class="text__success">95.5%</strong>
+                  </div>
+                  <div class="signal__chart">
+                    <div class="row middle">
+                      <div class="col xs__7">
+                        <div class="signal__chart--item" id="chart_1"></div>
+                      </div>
+                      <div class="col xs__5">
+                        <div class="signal__chart--info"><strong class="text__success">95.6%</strong><span>Accuracy</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signal__footer"><span>Subscribed till:</span><strong>19.02.2018</strong></div>
+                </div>
+              </div>
+              <div class="col lg__3 sm__6">
+                <div class="panel signal">
+                  <svg class="signal__icon">
+                    <use xlink:href="#robot-dom"></use>
+                  </svg>
+                  <h3 class="panel__header"><a href="">DOMinance, Binance, M5, BTC/USDT</a></h3>
+                  <p>Based on News agrigation and analisys, macroeconomical factors, ecomonical reports</p>
+                  <div class="signal__type">ANN type Convolutional</div>
+                  <div class="signal__alert success">Alert</div>
+                  <div class="signal__info">
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><span class="text__darkgrey">6545.4500</span><span class="text__darkgrey">-</span><span>6545.0500 </span><strong class="text__success">95.5%</strong>
+                  </div>
+                  <div class="signal__chart">
+                    <div class="row middle">
+                      <div class="col xs__7">
+                        <div class="signal__chart--item" id="chart_2"></div>
+                      </div>
+                      <div class="col xs__5">
+                        <div class="signal__chart--info"><strong class="text__success">95.6%</strong><span>Accuracy</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signal__footer"><span>Subscribed till:</span><strong>19.02.2018</strong></div>
+                </div>
+              </div>
+              <div class="col lg__3 sm__6">
+                <div class="panel signal">
+                  <svg class="signal__icon">
+                    <use xlink:href="#robot-dom"></use>
+                  </svg>
+                  <h3 class="panel__header"><a href="">DOMinance, Binance, M5, BTC/USDT</a></h3>
+                  <p>Based on News agrigation and analisys, macroeconomical factors, ecomonical reports</p>
+                  <div class="signal__type">ANN type Convolutional</div>
+                  <div class="signal__alert success">Alert</div>
+                  <div class="signal__info">
+                    <svg>
+                      <use xlink:href="#up-icon"></use>
+                    </svg><span class="text__darkgrey">6545.4500</span><span class="text__darkgrey">-</span><span>6545.0500 </span><strong class="text__success">95.5%</strong>
+                  </div>
+                  <div class="signal__chart">
+                    <div class="row middle">
+                      <div class="col xs__7">
+                        <div class="signal__chart--item" id="chart_3"></div>
+                      </div>
+                      <div class="col xs__5">
+                        <div class="signal__chart--info"><strong class="text__success">95.6%</strong><span>Accuracy</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signal__footer"><span>Subscribed till:</span><strong>19.02.2018</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="b__footer">
+          <p>Aisberg will be listed on major exchanges. See details at <a>CoinMarketCap</a> and <a>Block.cc</a></p>
+          <p>Copyright 2018. Aisberg.com <a>Privacy Polycy</a> | <a>Terms & Conditions</a> | <a>F.A.Q.</a> | <a>News</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

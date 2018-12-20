@@ -1,0 +1,251 @@
+.b__layout {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  &--header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 3;
+    border-bottom: 1px solid $grey;
+  }
+
+  &--aside {
+    position: fixed;
+    width: 240px;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    z-index: 2;
+    background-color: $dark;
+    transition: all .15s linear;
+  }
+
+  &--content {
+    position: fixed;
+    background-color: $grey;
+    top: 60px;
+    bottom: 0;
+    left: 240px;
+    right: 0;
+    overflow: auto;
+    z-index: 1;
+    transition: all .15s linear;
+  }
+
+
+  &.hide__sidebar &--aside {
+    left: -240px;
+  }
+
+  &.hide__sidebar &--content {
+    left: 0;
+  }
+
+  @include notebookDown {
+    &--aside, &.hide__sidebar &--aside {
+      left: -240px;
+      &.show {
+        left: 0;
+      }
+    }
+    &--content, &.hide__sidebar &--content {
+      left: 0px;
+
+      &.blur {
+        overflow: hidden !important;
+
+        * {
+          filter: blur(2px);
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $dark;
+          opacity: 0.25;
+          z-index: 9999;
+          filter: blur(0);
+        }
+      }
+    }
+  }
+}
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  height: 100%;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+
+}
+
+.b__header, .b__footer {flex:none;}
+.b__main {
+  flex: 1;
+  padding: 20px 20px 0;
+
+  @include mobile {
+    padding: 20px 10px 0;
+  }
+
+}
+.b__footer {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: $white;
+  color: $darkgrey;
+
+  p {margin: 0;}
+}
+
+
+.b__header {
+  &--content {
+    
+    padding: 20px 20px 0;
+    background-color: $white;
+
+    @include mobile {
+      padding: 20px 10px 0;
+    }
+  }
+
+  &--navs {
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+
+        a {
+          display: block;
+          border-bottom: 2px solid $white;
+          padding: 10px 20px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          color: $dark;
+
+          &:hover {
+            color: $cta;
+            text-decoration: none;
+          }
+
+          &.active {
+            color: $dark;
+            border-bottom-color: $cta;
+          }
+        }
+      }
+
+      
+    }
+
+    @include mobile {
+      //margin: 0 -10px;
+
+      ul li a {
+        padding: 10px;
+      }
+    }
+
+  }
+}
+
+.panel {
+  background-color: $white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba($black, .1);
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 3px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
+    .icon {
+      color: $cta;
+      display: block;
+      flex:none;
+      width: 24px;
+      height: 24px;
+    }
+
+    .title {
+      display: block;
+      flex: 1;
+      padding: 0 .5em;
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      flex: none;
+      white-space: nowrap;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5em;
+        @include mobile {
+          margin-right: 0;
+        }
+      }
+      span {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+
+  }
+}
+
+#preloader {
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+}

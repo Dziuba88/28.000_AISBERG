@@ -1,0 +1,13 @@
+$white: #ffffff !default;
+$black: #000000 !default;
+$dark: #150f2d !default;
+$grey: #f1f2f4 !default;
+$darkgrey: #727e98 !default;
+$link: #0e8bcc !default;
+$cta: #ff365c !default;
+$info: #00d1d1 !default;
+$warning: #ffaf36 !default;
+$success: #2ebf2e !default;
+$danger: #ff3636 !default;
+
+

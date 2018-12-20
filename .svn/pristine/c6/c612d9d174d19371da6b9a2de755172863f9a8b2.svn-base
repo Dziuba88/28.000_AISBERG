@@ -1,0 +1,155 @@
+
+$noto: 'Noto Sans', sans-serif !default;
+$mont: 'Montserrat', sans-serif !default;
+
+
+body {
+  font-family: $noto;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $mont;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 29px;
+  line-height: 35px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+h6 {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a, button, [role=button] {
+  cursor: pointer;
+  transition: all .15s linear;
+  outline: 0;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+
+  &:hover {
+    color: $cta;
+    text-decoration: underline;
+  }
+}
+
+svg:not(:root) {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+}
+
+
+.text {
+  &__info {
+    color: $info;
+  }
+  &__warning {
+    color: $warning;
+  }
+  &__success {
+    color: $success;
+  }
+  &__danger {
+    color: $danger;
+  }
+  &__darkgrey {
+    color: $darkgrey;
+  }
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  font-family: $mont;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+
+  &__group {
+    .btn {
+      margin: 0 5px 20px;
+    }
+  }
+
+  &.ghost {
+    color: $cta;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &.outline {
+    background-color: $white;
+    border: 2px solid rgba($dark, .1);
+    color: $cta;
+
+    &:hover {
+      background-color: $dark;
+      border-color: $dark;
+    }
+  }
+
+  &.cta {
+    background-color: $cta;
+    color: $white;
+
+    &:hover {
+      background-color: $dark;
+      color: $white;
+    }
+    &:disabled, &.disabled {
+      background-color: $grey;
+      color: $darkgrey;
+      cursor: default;
+    }
+  }
+
+
+}

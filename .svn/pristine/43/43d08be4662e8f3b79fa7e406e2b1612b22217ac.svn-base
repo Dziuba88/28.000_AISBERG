@@ -1,0 +1,118 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'PROFILE'
+block header
+  .b__header--content
+    h1.page--title Profile
+    .b__header--navs: ul
+      li(): a(href="").active Profile
+      li(): a(href="") Verification
+      li(): a(href="") Security
+block content
+  .row
+    .col.md__3.xl__2
+      .profile__photo
+        .profile__photo--preview
+          img.image(src="img/no-photo.svg", alt="")
+          button.delete: svg(): use(xlink:href="#delete-icon")
+        .profile__photo--upload
+          input#photo--upload(type="file")
+          label(for="photo--upload") add photo
+    .col.md__9.xl__8
+      .panel
+        h3.panel__header
+          svg.icon: use(xlink:href="#wallet-icon")
+          span.title Your Wallet:
+        .profile__wallet 0x74DC6cB72096f3F08ed02e0p7d170aC8880e3e907
+    .col.lg__12
+      .panel
+        h3.panel__header
+          svg.icon: use(xlink:href="#mobile-icon")
+          span.title Phone number verification
+          small.label.text__warning
+            svg(): use(xlink:href="#warning-icon")
+            span Unverified
+        .profile__phone
+          p.text__darkgrey From troubled dreams, he found himself transformed in his 
+          .row: .col.lg__6.lg__3--offset.md__8.md__2--offset
+            .profile__phone--form
+              .row
+                .col.sm__6: .form__row
+                  label Phone
+                  input(type="tel", placeholder="Enter your phone number", data-inputmask="'mask': '+(999) 999-9999'")
+                .col.sm__6: .form__row
+                  label Code
+                  input(type="tel", placeholder="Enter received code here", data-inputmask="'mask': '999999'")
+                  label.message Enter a code from SMS
+        .profile__phone--controls
+          .btn__group
+            button.btn.outline Send Code
+            button.btn.cta Verify Phone
+          .counter
+            svg.text__warning: use(xlink:href="#waiting-icon")
+            span 
+              strong.text__warning 60 seconds
+              | &nbsp;&nbsp;before resending a code
+    .col.lg__12
+      .panel
+        h3.panel__header
+          svg.icon: use(xlink:href="#identity-icon")
+          span.title Identity
+          small.label.text__success
+            svg(): use(xlink:href="#success-icon")
+            span Verified
+        .profile__identity
+          p.text__darkgrey From troubled dreams, he found himself transformed in his 
+          .row: .col.lg__6.lg__3--offset.md__8.md__2--offset
+            .profile__identity--form
+              .row
+                .col.sm__6: .form__row.error
+                  label First name:
+                  input(type="text", placeholder="Enter your first name")
+                  label.message P small From troubled dreams
+                .col.sm__6: .form__row.success
+                  label Last name:
+                  input(type="text", placeholder="Enter your last name")
+              .row
+                .col.sm__4: .form__row: select
+                  option(data-display="DD") 
+                  -for(i=1;i<=31;i++)
+                    option(value=i)= i
+                .col.sm__4: .form__row: select
+                  option(data-display="MM") 
+                  option(value="01") January
+                  option(value="02") February
+                  option(value="03") March
+                  option(value="04") April
+                  option(value="05") May
+                  option(value="06") June
+                  option(value="07") July
+                  option(value="08") August
+                  option(value="09") September
+                  option(value="10") October
+                  option(value="11") November
+                  option(value="12") December
+                .col.sm__4: .form__row: select
+                  option(data-display="YYYY") 
+                  -for(i=1940;i<=2019;i++)
+                    option(value=i)= i
+              .row
+                .col.sm__6: .form__row
+                  label Country:
+                  input(type="text", placeholder="Enter country")
+                .col.sm__6: .form__row
+                  label City:
+                  input(type="text", placeholder="Enter city")
+                .col.sm__6: .form__row
+                  label ZIPcode:
+                  input(type="text", placeholder="Enter your code")
+                .col.sm__6: .form__row
+                  label Address:
+                  input(type="text", placeholder="Enter your address")
+        .profile__identity--controls
+          .btn__group
+            button.btn.outline Save Data
+            button.btn.cta Save & Verify Data
+
+
+

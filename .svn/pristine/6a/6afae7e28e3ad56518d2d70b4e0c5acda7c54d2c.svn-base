@@ -1,0 +1,29 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'PROFILE'
+block header
+  .b__header--content
+    h1.page--title Profile
+    .b__header--navs: ul
+      li(): a(href="") Profile
+      li(): a(href="") Verification
+      li(): a(href="").active Security
+block content
+  .panel
+    h3.panel__header
+      svg.icon: use(xlink:href="#lock-icon")
+      span.title Security
+    .profile__security
+      .row: .col.md__8.xl__5
+        h4 Secondary Email
+        p.text__darkgrey You have to also the residential address to receive payments will confirm a sva the personality for this purpose load a photo of docupments.
+      .row: .col.md__5.xl__3
+        .form__row
+          label Email
+          input(type="email", placeholder="Enter your secondary email here")
+        .form__row: button.btn.cta submit
+      hr
+      .row: .col.md__8.xl__5
+        h4 Change Password
+        p.text__darkgrey You have to also the residential address to receive payments will confirm a sva the personality for this purpose load a photo of docupments.
+      a(href="").btn.cta Change your password

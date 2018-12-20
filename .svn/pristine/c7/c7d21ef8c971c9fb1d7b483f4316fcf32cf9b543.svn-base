@@ -1,0 +1,32 @@
+extends layouts/securityLayout
+block variables
+  - var pageTitle = 'Change Password'
+block form
+  .form__sign: .container
+    .row
+      .col.lg__4.md__4--offset.md__6.md__3--offset.sm__8.sm__2--offset
+        h1 
+          span Change Password
+          small
+            svg(): use(xlink:href='#logo-icon')
+        p.text__darkgrey From troubled dreams, he found himself transformed in phis bed into a horrible vermin.
+        .form__row
+          label New password
+          input(type="password", placeholder="Enter your new password here")
+        .form__row
+          label Re-Enter new password
+          input(type="password", placeholder="Re-Enter your new password here")
+        .form__sign--ctrl
+          .col.text__right: button.btn.cta(data-mds="unsuccess") submit
+
+block modals
+  .modal(data-modal="unsuccess" data-scrollbar="horizontal")
+    .modal__backdrop(data-close="modal")
+    .modal__confirm.wild
+      svg.modal__confirm--back.text__danger: use(xlink:href="#alert-unsuccess")
+      button.close(data-close="modal"): svg(): use(xlink:href="#close-icon")
+      .modal__confirm--body
+        h2.text__danger Unsuccess
+        p.text__darkgrey From troubled dreams, he found himself transformed in his bed into a horrible vermin.
+        strong.text__upper
+          a.cta(href="") To dashboard

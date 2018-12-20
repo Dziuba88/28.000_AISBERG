@@ -1,0 +1,159 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mCSB_container {
+    height: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  &.show {
+    visibility: visible;
+    z-index: 99;
+  }
+  
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $dark;
+    opacity: 0.3;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 2;
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(20px);
+    transition: all .15s linear;
+    padding: 40px 20px;
+    flex: none;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform-origin: top center;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+
+      background-color: transparent;
+      border: none;
+      color: $white;
+      margin: 0;
+      padding: 0;
+
+      &:hover {
+        color: $cta;
+      }
+      svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__confirm {
+    position: relative;
+    z-index: 2;
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(20px);
+    transition: all .15s linear;
+    padding: 40px;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba($black, .1);
+    border-radius: 3px;
+    flex: none;
+    width: 460px;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform-origin: top center;
+
+    &.wild {
+      width: 580px;
+      max-width: 100%;
+    }
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+
+      background-color: transparent;
+      border: none;
+      color: $dark;
+      margin: 0;
+      padding: 0;
+
+      svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        color: $cta;
+      }
+    }
+
+    svg.modal__confirm--back {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      z-index: 0;
+      opacity: 0.1;
+
+      @include mobile {
+        top: 20px;
+        left: 20px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &--body {
+      padding-left: 40px;
+
+      @include mobile {
+        padding: 0;
+      }
+
+      .btn__group {
+        margin: 0 -5px -20px;
+        padding-top: 20px;
+      }
+    }
+  }
+
+
+
+  &.show &__image, &.show &__confirm {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}

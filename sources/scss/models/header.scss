@@ -1,0 +1,277 @@
+.b__layout--header {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+
+  [data-toggle=sidebar] {
+    display: block;
+    flex:none;
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border: none;
+    margin: 0;
+    padding: 18px;
+    outline: 0;
+    color: $dark;
+    margin-right: 2px;
+
+    &:hover {
+      color: $cta;
+    }
+
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    @include notebookDown {
+      display: none;
+    }
+  }
+
+  [data-toggle=offcanvas] {
+    display: none;
+    flex:none;
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border: none;
+    margin: 0;
+    padding: 18px;
+    outline: 0;
+    color: $dark;
+    margin-right: 2px;
+
+    &:hover {
+      color: $cta;
+    }
+
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    @include notebookDown {
+      display: block;
+    }
+  }
+
+  .brand {
+    display: block;
+    flex: none;
+    padding: 15px 0;
+
+    svg {
+      width: 100px;
+      height: 30px;
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .separator {
+    flex: 1;
+  }
+
+  .nav {
+    flex: none;
+    padding: 0 10px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      list-style-image: none;
+      display: flex;
+
+      li {
+        display: block;
+        padding: 0 10px;
+
+        [data-dropdown=toggle] {
+          display: block;
+          background-color: #ffffff;
+          border: none;
+          color: $dark;
+          padding: 18px 0;
+
+          &:hover {
+            color: $cta;
+          }
+
+          svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        &.open [data-dropdown=toggle] {
+          color: $cta;
+        }
+
+        &.user {
+          [data-dropdown=toggle] {
+            color: $dark !important;
+
+            svg {
+              border-radius: 3px;
+              background-color: $grey;
+            }
+          }
+
+          ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            list-style-image: none;
+            li {
+              padding: 0;
+              padding-right: 20px;
+              display: block;
+              overflow-wrap: break-word;
+              word-wrap: break-word;
+
+              &.user__mail {
+                font-weight: 700;
+                margin-bottom: 10px;
+              }
+
+              &.user__menu {
+                padding: 8px 0;
+
+                &.unstyled svg {
+                  background-color: $darkgrey;
+                  border-radius: 3px;
+                  color: $white !important;
+                }
+
+                span {
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 0.5em;
+                }
+
+                a {
+                  display: block;
+                  text-decoration: none !important;
+                  color: $dark;
+
+                  svg {
+                    color: $darkgrey;
+                  }
+
+                  &:hover {
+                    color: $cta;
+
+                    svg {
+                      color: $cta;
+                    }
+                  }
+                }
+              }
+
+              &.user__exit {
+                padding-top: 10px;
+                text-align: right;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                line-height: 1;
+
+                a {
+                  color: $dark;
+                  text-decoration: none !important;
+
+                  &:hover {
+                    color: $cta;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+
+
+        .message {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          padding-right: 20px;
+          border-bottom: 1px solid $grey;
+          box-sizing: border-box;
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+          &__label {
+            font-weight: 700;
+            font-size: 11px;
+            white-space: nowrap;
+            margin-bottom: 10px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+              margin-right: 0.5em;
+            }
+
+            span {
+              display: inline-block;
+              line-height: 1;
+            }
+          }
+
+          &__title {
+            @extend h5;
+            margin-bottom: 10px;
+          }
+
+          &__list {
+            max-height: 260px;
+            border-bottom: 1px solid $grey;
+
+            &:after {
+              content: '';
+              display: block;
+              height: 20px;
+              background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+              background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+              background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+
+        .readmore {
+          padding-top: 10px;
+          margin-bottom: -10px;
+          text-align: right;
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+}

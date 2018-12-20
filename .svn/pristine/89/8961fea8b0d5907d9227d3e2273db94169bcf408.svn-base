@@ -1,0 +1,359 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'DASHBOARD'
+block header
+  .b__header--content
+    .row.middle
+      .col.md__4
+        h1.page--title Dashboard
+    .b__header--list: .row
+      .col.xs__6.sm__3: .item
+        .item__title ANN Signals per Day
+        .item__info
+          svg.item__info--icon: use(xlink:href="#up-icon")
+          .item__info--value 180 
+          .item__info--helper.text__success +10% 
+      .col.xs__6.sm__3: .item
+        .item__title Total Accuracy
+        .item__info
+          svg.item__info--icon: use(xlink:href="#down-icon")
+          .item__info--value 86% 
+          .item__info--helper.text__danger -10% 
+      .col.xs__6.sm__3: .item
+        .item__title Trading Pair
+        .item__info
+          .item__info--value +10%
+          .item__info--helper.text__darkgrey 0% 
+      .col.xs__6.sm__3: .item
+        .item__title Cripto Exchanges
+        .item__info
+          .item__info--value 4
+block content
+  .row
+    .col.md__8: .row
+      .col.sm__6: .panel.signal
+        .signal__direction BTC/USDT
+        h3.signal__prediction 4865.0035
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__separator
+        .signal__type ANN Signal, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_0
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__separator
+        .signal__type Dinamic Open Intperest, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_din_0
+          .col.xs__5: .signal__chart--info
+            span.bid Bid
+            span.ask Ask
+      .col.sm__6: .panel.signal
+        .signal__direction BTC/USDT
+        h3.signal__prediction 4865.0035
+        .signal__info
+          svg(): use(xlink:href="#down-icon")
+          span 6545.0500 
+          strong.text__danger 95.5%
+        .signal__separator
+        .signal__type ANN Signal, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_1
+          .col.xs__5: .signal__chart--info
+            strong.text__danger 95.6%
+            span Accuracy
+        .signal__separator
+        .signal__type Dinamic Open Intperest, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_din_1
+          .col.xs__5: .signal__chart--info
+            span.bid Bid
+            span.ask Ask
+      .col.sm__6: .panel.signal
+        .signal__direction BTC/USDT
+        h3.signal__prediction 4865.0035
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__separator
+        .signal__type ANN Signal, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_2
+          .col.xs__5: .signal__chart--info
+            strong.text__warning 95.6%
+            span Accuracy
+        .signal__separator
+        .signal__type Dinamic Open Intperest, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_din_2
+          .col.xs__5: .signal__chart--info
+            span.bid Bid
+            span.ask Ask
+      .col.sm__6: .panel.signal
+        .signal__direction BTC/USDT
+        h3.signal__prediction 4865.0035
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__separator
+        .signal__type ANN Signal, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_3
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__separator
+        .signal__type Dinamic Open Intperest, M5
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_din_3
+          .col.xs__5: .signal__chart--info
+            span.bid Bid
+            span.ask Ask
+
+
+
+
+    .col.md__4
+      .panel.verification
+        h3.panel__header Verification
+        .verification__list
+          .verification__item
+            .verification__item--title Phone Number
+            .verification__item--status.text__success
+              svg(): use(xlink:href="#success-icon")
+              span Verified
+          .verification__item
+            .verification__item--title Identity
+            .verification__item--status.text__warning
+              svg(): use(xlink:href="#warning-icon")
+              span Unverified
+        .verification__progress
+          h6 Complete Verification
+          // classes 1 item: 'middle'; all items: 'full';
+          .progress.middle
+      .panel.subscription
+        h3.panel__header Subscription plan
+        .subscription__list
+          svg.subscription__list--bg: use(xlink:href="#earth")
+          .subscription__list--item
+            svg(): use(xlink:href="#subscribe")
+            h5 h5 size 14px/18px
+            p P small From troubled dreams, he found himself transformed in his 
+          .subscription__list--item
+            svg(): use(xlink:href="#subscribe")
+            h5 h5 size 14px/18px
+            p P small From troubled dreams, 
+          .subscription__list--item
+            svg(): use(xlink:href="#subscribe")
+            h5 h5 size 14px/18px
+            p P small From troubled dreams, he found himself transformed in his bed into a horrpible vermin. 
+        .subscription__action: button.btn.cta Subscribe
+  //.signals__list
+    .row
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span.text__darkgrey 6545.4500
+          span.text__darkgrey -
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_0
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__footer
+          span Subscribed till:
+          strong 19.02.2018
+    .row
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-fund")
+        h3.panel__header: a(href="") Fundamental, Binance
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_1
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-laf")
+        h3.panel__header: a(href="") Lafaet Cron, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_2
+          .col.xs__5: .signal__chart--info
+            strong.text__warning 75.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_3
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-news")
+        h3.panel__header: a(href="") News Throttle, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_4
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-fund")
+        h3.panel__header: a(href="") Fundamental, Binance
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_5
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-laf")
+        h3.panel__header: a(href="") Lafaet Cron, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.danger No Signal
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item.no-signal
+          .col.xs__5: .signal__chart--info
+            strong.text__darkgrey 0%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_6
+          .col.xs__5: .signal__chart--info
+            strong.text__danger 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-news")
+        h3.panel__header: a(href="") News Throttle, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_7
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-fund")
+        h3.panel__header: a(href="") Fundamental, Binance
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_8
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-laf")
+        h3.panel__header: a(href="") Lafaet Cron, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_9
+          .col.xs__5: .signal__chart--info
+            strong.text__warning 75.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_10
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-news")
+        h3.panel__header: a(href="") News Throttle, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_11
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-fund")
+        h3.panel__header: a(href="") Fundamental, Binance
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_12
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-laf")
+        h3.panel__header: a(href="") Lafaet Cron, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_13
+          .col.xs__5: .signal__chart--info
+            strong.text__warning 75.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_14
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+      .col.xl__3.md__4.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-news")
+        h3.panel__header: a(href="") News Throttle, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type <a href="">Convolutional</a>
+        .signal__alert.success Alert
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_15
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+

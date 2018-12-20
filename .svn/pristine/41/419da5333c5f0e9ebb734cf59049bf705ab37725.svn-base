@@ -1,0 +1,282 @@
+extends layouts/baseLayout
+block variables
+  - var pageTitle = 'SIGNAL PAGE'
+block header
+  .b__header--content
+    .row
+      .col.md__6
+        h1.page--title DOMinance
+          .tooltip
+            svg.tooltip__icon: use(xlink:href="#info-icon")
+            .tooltip__menu
+              .tooltip__menu--title h4 size 17px/20px
+              .tooltip__menu--text p - From troubled dreams, <a href="">he found himself transformed</a> in his bed into a horrible vermin. He lay on his 
+        p P - From troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted
+      .col.md__6: .signals__filters
+        .form__row: select
+          option(data-display="Currencies") 
+          option(value="01" selected) BTC/USDT
+          option(value="02") Currencies 2
+          option(value="03") Currencies 3
+          option(value="04") Currencies 4
+        .form__row: select
+          option(data-display="Timeframe") 
+          option(value="01" selected) M1
+          option(value="02") Timeframe 2
+          option(value="03") Timeframe 3
+          option(value="04") Timeframe 4
+        .form__row: select
+          option(data-display="Stock") 
+          option(value="01" selected) Binance
+          option(value="02") Stock 2
+          option(value="03") Stock 3
+          option(value="04") Stock 4
+    .b__header--navs: ul
+      li(): a(href="").active All Signals
+      li(): a(href="") Popular
+      li(): a(href="") Subscribed
+block content
+  .signal__page
+    .panel.collapsible
+      .panel__close: svg(): use(xlink:href="#close-icon")
+      h3.panel__header Get more AIsberg DOMinance prediction signals
+      .row
+        .col.sm__3.xs__6: .plan
+          .plan__title M1
+          .plan__info For Free 
+
+        .col.sm__3.xs__6: .plan
+          .plan__title M5
+          .plan__info 
+            strong.text__cta $100/mo
+            span &nbsp;or&nbsp;
+            strong.text__cta 10 AIS/mo
+          a.btn.cta(href="") subscribe
+        .col.sm__3.hide__mobile: .plan
+          .plan__title M15
+          .plan__info 
+            strong.text__cta $100/mo
+            span &nbsp;or&nbsp;
+            strong.text__cta 10 AIS/mo
+          a.btn.cta(href="") subscribe
+        .col.sm__3.hide__mobile: .plan
+          .plan__title M15
+          .plan__info 
+            strong.text__cta $100/mo
+            span &nbsp;or&nbsp;
+            strong.text__cta 10 AIS/mo
+          a.btn.cta(href="") subscribe
+    .row
+      .col.md__8.xl__9: .panel
+        h3.panel__header BTC/USDT, M1, Binance
+        #chart_candle
+      .col.md__4.xl__3: .panel.performance
+        h3.panel__header Performance
+        .performance__price
+          small Predicted Price
+          h1.text__cta 5000.5555
+          h4 USDT
+        .performance__probability
+          svg(): use(xlink:href="#thumb-icon")
+          h2 BUY
+          span
+            strong.text__success 95.6%
+            small Probability
+        .performance__list
+          span Accuracy
+          strong 95.6%
+          span profit /mo
+          strong 125.5%
+          span Signals
+          strong 12.252
+      .col.md__8.xl__9
+        .panel.signal
+          h3.panel__header AI Signal
+          .signal__predicted
+            span Predicted Price Change
+            svg(): use(xlink:href="#up-icon")
+            strong.text__success 0.57%
+          #chart_ai
+          .signal__predicted--legend
+            span.stock BTC / USDT, M1, Binance
+            span.cta Accurate Predictions
+            span.darkgrey Missed Predictions
+            span.info Real Price
+        .panel.signal
+          h3.panel__header DOMingance Prediction Accuracy
+          .signal__predicted
+            span Prediction Rate
+            svg(): use(xlink:href="#up-icon")
+            strong.text__success 1.32%
+          #chart_pred
+          .signal__predicted--legend
+            span.stock BTC / USDT, M1, Binance
+            span.cta Inaccurate Prediction
+            span.success Accurate Predictions
+      .col.md__4.xl__3: .panel.history
+        h3.panel__header Signal History
+        .history__date 2018 Mar 21
+        .history__item
+          .history__item--time 08:45
+          .history__item--status: svg(): use(xlink:href="#up-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__success 95.5%
+        .history__item
+          .history__item--time 08:30
+          .history__item--status: svg(): use(xlink:href="#down-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__danger 35.5%
+        .history__item
+          .history__item--time 08:15
+          .history__item--status: svg(): use(xlink:href="#up-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__success 95.5%
+        .history__item
+          .history__item--time 08:00
+          .history__item--status: svg(): use(xlink:href="#down-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__danger 35.5%
+        .history__item
+          .history__item--time 07:45
+          .history__item--status: svg(): use(xlink:href="#up-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__success 95.5%
+        .history__item
+          .history__item--time 07:30
+          .history__item--status: svg(): use(xlink:href="#down-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__danger 35.5%
+        .history__item
+          .history__item--time 07:15
+          .history__item--status: svg(): use(xlink:href="#up-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__success 95.5%
+        .history__item
+          .history__item--time 07:00
+          .history__item--status: svg(): use(xlink:href="#down-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__danger 35.5%
+        .history__item
+          .history__item--time 06:45
+          .history__item--status: svg(): use(xlink:href="#up-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__success 95.5%
+        .history__item
+          .history__item--time 06:30
+          .history__item--status: svg(): use(xlink:href="#down-icon")
+          .history__item--data
+            .value 
+              span.text__darkgrey 6545.4545 - 
+              strong 6545.0545 
+            .perc.text__danger 35.5%
+        .history__footer
+          a(href="").btn.ghost Learn More
+    h2.block__header Also need to see
+    .row
+      .col.lg__3.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type Convolutional
+        .signal__alert.success Alert
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span.text__darkgrey 6545.4500
+          span.text__darkgrey -
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_0
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__footer
+          span Subscribed till:
+          strong 19.02.2018
+      .col.lg__3.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type Convolutional
+        .signal__alert.success Alert
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span.text__darkgrey 6545.4500
+          span.text__darkgrey -
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_1
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__footer
+          span Subscribed till:
+          strong 19.02.2018
+      .col.lg__3.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type Convolutional
+        .signal__alert.success Alert
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span.text__darkgrey 6545.4500
+          span.text__darkgrey -
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_2
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__footer
+          span Subscribed till:
+          strong 19.02.2018
+      .col.lg__3.sm__6: .panel.signal
+        svg.signal__icon: use(xlink:href="#robot-dom")
+        h3.panel__header: a(href="") DOMinance, Binance, M5, BTC/USDT
+        p Based on News agrigation and analisys, macroeconomical factors, ecomonical reports
+        .signal__type ANN type Convolutional
+        .signal__alert.success Alert
+        .signal__info
+          svg(): use(xlink:href="#up-icon")
+          span.text__darkgrey 6545.4500
+          span.text__darkgrey -
+          span 6545.0500 
+          strong.text__success 95.5%
+        .signal__chart: .row.middle
+          .col.xs__7: .signal__chart--item#chart_3
+          .col.xs__5: .signal__chart--info
+            strong.text__success 95.6%
+            span Accuracy
+        .signal__footer
+          span Subscribed till:
+          strong 19.02.2018

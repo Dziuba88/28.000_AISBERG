@@ -1,0 +1,125 @@
+.aside__menu {
+  max-height: 100%;
+  overflow: auto;
+
+  .mCSB_dragger .mCSB_dragger_bar {
+    background-color: $white !important
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid rgba($white, .1);
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        color: $white;
+        text-decoration: none !important;
+        font-family: $mont;
+        font-weight: 700;
+        font-size: 17px;
+
+        span {
+          display: block;
+          flex: 1;
+          padding-left: 1em;
+        }
+
+        svg {
+          display: block;
+          flex: none;
+
+          &.icon {
+            width: 24px;
+            height: 24px;
+            color: $darkgrey;
+          }
+
+          .caret {
+            width: 18px;
+            height: 18px;
+            transition: all .15s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          }
+        }
+
+        &:hover, &:hover svg.icon {
+          color: $cta;
+        }
+      }
+
+      &.current {
+        background-color: $black;
+
+        a {
+          color: $cta;
+
+          svg.icon {
+            color: $cta;
+          }
+        }
+      }
+
+      &[data-collapse] {
+        .subnav {
+          margin: 0;
+          padding: 0;
+          margin-left: 20px;
+          border-top: 1px solid rgba($white, .1);
+          list-style: none;
+          list-style-image: none;
+          overflow: hidden;
+          height: 0;
+          opacity: 0;
+          transition: all .15s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+          a {
+            font-family: $noto;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $white;
+            padding-left: 0;
+
+            span {
+              padding-left: 0;
+            }
+
+            small {
+              flex: none;
+              display: block;
+              color: $white !important;
+            }
+
+          }
+
+          li {
+            border: none;
+          }
+
+          li a:hover, li.current a {
+            color: $cta;
+          }
+        }
+
+        &.open .subnav {
+          height: auto;
+          opacity: 1;
+        }
+
+        &.open svg.caret {
+          transform: rotate(180deg)
+        }
+
+
+      }
+    }
+  }
+}

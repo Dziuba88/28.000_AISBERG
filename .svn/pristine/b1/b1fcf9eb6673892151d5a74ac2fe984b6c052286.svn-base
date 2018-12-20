@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-config" content="favicons/browserconfig.xml"/>
+    <meta name="theme-color" content="#ff365c"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ff365c"/>
+    <link rel="shortcut icon" href="favicons/favicon.ico"/>
+    <title>AISBERG :: PROFILE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Noto+Sans:400,700&amp;amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body class="b__layout">
+    <div id="preloader"><img src="img/preloader.svg" alt=""/></div>
+    <div class="b__layout--header">
+      <button data-toggle="sidebar">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button>
+      <button data-toggle="offcanvas">
+        <svg>
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button><a class="brand" href="./">
+        <svg>
+          <use xlink:href="#logo"></use>
+        </svg></a>
+      <div class="separator"></div>
+      <div class="nav">
+        <ul>
+          <li class="dropdown messages">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#bell"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <div class="message__list" data-scrollbar="horizontal">
+                <div class="message">
+                  <div class="message__label text__info">
+                    <svg>
+                      <use xlink:href="#info-icon"></use>
+                    </svg><span>Info icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Info notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__warning">
+                    <svg>
+                      <use xlink:href="#warning-icon"></use>
+                    </svg><span>Warning icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Warning notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__success">
+                    <svg>
+                      <use xlink:href="#success-icon"></use>
+                    </svg><span>Success icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Success notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+                <div class="message">
+                  <div class="message__label text__danger">
+                    <svg>
+                      <use xlink:href="#danger-icon"></use>
+                    </svg><span>Danger icon</span>
+                  </div>
+                  <div class="message__title"><a href="">Danger notification</a></div>
+                  <div class="message__text">P - From troubled dreams, he found himself trpansformed. </div>
+                </div>
+              </div>
+              <div class="readmore"><a class="btn ghost" href="">View all</a></div>
+            </div>
+          </li>
+          <li class="dropdown user">
+            <button data-dropdown="toggle">
+              <svg>
+                <use xlink:href="#user"></use>
+              </svg>
+            </button>
+            <div class="dropdown__menu">
+              <ul>
+                <li class="user__mail">vasilii_constantinopoliskii@gmail.com</li>
+                <li class="user__menu unstyled"><a href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Profile</span></a></li>
+                <li class="user__menu"><a href="">
+                    <svg>
+                      <use xlink:href="#settings"></use>
+                    </svg><span>Settings</span></a></li>
+                <li class="user__exit"><a href="">Exit</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--aside">
+      <div class="aside__menu" data-scrollbar="horizontal">
+        <ul>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#finance-icon"></use>
+              </svg><span>Finance</span></a></li>
+          <li><a href=""> 
+              <svg class="icon">
+                <use xlink:href="#security-icon"></use>
+              </svg><span>Security</span></a></li>
+          <li class="current open" data-collapse="signals"><a data-show="signals">
+              <svg class="icon">
+                <use xlink:href="#signals-icon"></use>
+              </svg><span>Signals</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li class="current"><a href=""><span>All</span></a></li>
+              <li><a href=""><span>Popular</span><small>35%/mo</small></a></li>
+              <li><a href=""><span>DOMinance</span><small>135%/mo</small></a></li>
+              <li><a href=""><span>News Thrpottle</span><small>35%/mo</small></a></li>
+            </ul>
+          </li>
+          <li data-collapse="viewed"><a data-show="viewed">
+              <svg class="icon">
+                <use xlink:href="#viewed-icon"></use>
+              </svg><span>Last Viewed</span>
+              <svg class="caret">
+                <use xlink:href="#caret"></use>
+              </svg></a>
+            <ul class="subnav">
+              <li><a href=""><span>DOMinance</span></a></li>
+              <li><a href=""><span>Lafaet Cron </span></a></li>
+              <li><a href=""><span>News Thrpottle</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="b__layout--content" data-scrollbar="horizontal">
+      <div class="flex__column">
+        <div class="b__header">
+          <div class="b__header--content">
+            <h1 class="page--title">Profile</h1>
+            <div class="b__header--navs">
+              <ul>
+                <li><a href="">Profile</a></li>
+                <li><a class="active" href="">Verification</a></li>
+                <li><a href="">Security</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="b__main">
+          <div class="panel">
+            <h3 class="panel__header">
+              <svg class="icon">
+                <use xlink:href="#account-icon"></use>
+              </svg><span class="title">Verification </span>
+            </h3>
+            <div class="profile__verification"> 
+              <p>You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format</p>
+              <div class="profile__verification--status warning"> 
+                <svg>
+                  <use xlink:href="#warning-icon"></use>
+                </svg><span><strong>Warning!</strong> You do not have KYC</span>
+              </div>
+              <div class="row">
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>1. Identification document with photo</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_photo.png" alt=""/></p>
+                    <div class="form__row">
+                      <label>Document photo:</label>
+                      <select>
+                        <option value="driver__license">The driver's license from two sides</option>
+                        <option value="id__card">ID card from two sides</option>
+                        <option value="passport">Passport from two sides</option>
+                      </select>
+                    </div>
+                    <div class="form__row">
+                      <div class="fileinput">
+                        <input id="photoDocFront" type="file" accept=".png, .jpg, .jpeg"/><span class="fileinput__selected">ID front side image</span>
+                        <label class="btn outline" for="photoDocFront">Browse</label>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="fileinput">
+                        <input id="photoDocBack" type="file" accept=".png, .jpg, .jpeg"/><span class="fileinput__selected">ID back side image</span>
+                        <label class="btn outline" for="photoDocBack">Browse</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>2. The document confirming the residence</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_order.png" alt=""/></p>
+                    <div class="form__row">
+                      <label>The document confirming the residence:</label>
+                      <select>
+                        <option value="receipt__rent">The receipt for a rent</option>
+                        <option value="utility__bill">Utility Bill</option>
+                        <option value="bank__certificate">Bank Certificate</option>
+                        <option value="any__other">Other</option>
+                      </select>
+                    </div>
+                    <div class="form__row">
+                      <div class="fileinput">
+                        <input id="orderDoc" type="file" accept=".png, .jpg, .jpeg"/><span class="fileinput__selected">Front side image</span>
+                        <label class="btn outline" for="orderDoc">Browse</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile__verification--footer">
+                <button class="btn cta">submit to verification</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 class="panel__header">
+              <svg class="icon">
+                <use xlink:href="#account-icon"></use>
+              </svg><span class="title">Verification </span>
+            </h3>
+            <div class="profile__verification"> 
+              <p>You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format</p>
+              <div class="profile__verification--status warning"> 
+                <svg>
+                  <use xlink:href="#warning-icon"></use>
+                </svg><span><strong>Warning!</strong> Your personal data is verefying</span>
+              </div>
+              <div class="row">
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>1. Identification document with photo</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_photo.png" alt=""/></p>
+                    <div class="verifying">
+                      <div class="profile__verification--status info"> 
+                        <svg>
+                          <use xlink:href="#timelapse-icon"></use>
+                        </svg><span>Verifing</span>
+                      </div>
+                      <div class="verifying__type">The driver's license from two parts</div>
+                      <div class="verifying__file"><a data-mds="docPhotoFront">Front.png</a></div>
+                      <div class="verifying__file"><a data-mds="docPhotoBack">Back.png </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>2. The document confirming the residence</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_order.png" alt=""/></p>
+                    <div class="verifying">
+                      <div class="profile__verification--status info"> 
+                        <svg>
+                          <use xlink:href="#timelapse-icon"></use>
+                        </svg><span>Verifing</span>
+                      </div>
+                      <div class="verifying__type">The receipt for a rent bill</div>
+                      <div class="verifying__file"><a data-mds="docOrder">Front.png</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile__verification--footer">
+                <button class="btn cta" disabled="disabled">submit to verification</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 class="panel__header">
+              <svg class="icon">
+                <use xlink:href="#account-icon"></use>
+              </svg><span class="title">Verification </span>
+            </h3>
+            <div class="profile__verification"> 
+              <p>You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format</p>
+              <div class="profile__verification--status danger"> 
+                <svg>
+                  <use xlink:href="#danger-icon"></use>
+                </svg><span><strong>Rejected!</strong> Your personal bill data rejected</span>
+              </div>
+              <div class="row">
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>1. Identification document with photo</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_photo.png" alt=""/></p>
+                    <div class="verifying"><a class="delete" data-mds="confirmDelete">
+                        <svg>
+                          <use xlink:href="#delete-icon"></use>
+                        </svg></a>
+                      <div class="profile__verification--status success"> 
+                        <svg>
+                          <use xlink:href="#success-icon"></use>
+                        </svg><span>Verified</span>
+                      </div>
+                      <div class="verifying__type">The driver's license from two parts</div>
+                      <div class="verifying__file"><a data-mds="docPhotoFront">Front.png</a></div>
+                      <div class="verifying__file"><a data-mds="docPhotoBack">Back.png </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <h4>2. The document confirming the residence</h4>
+                    <p class="text__darkgrey">You need to send us one of the variant of document which you can choose lower. You will need to send us img of front and back of docupment</p>
+                    <p><img src="img/doc_order.png" alt=""/></p>
+                    <div class="verifying">
+                      <div class="profile__verification--status danger"> 
+                        <svg>
+                          <use xlink:href="#danger-icon"></use>
+                        </svg><span>Rejected<small>P small From troubled dreams, he found himself transformed<br>in his bed into a horrible vermin. He lay on his armour-like<br>back, and if he lifted his head a little he could see hips brown </small></span>
+                      </div>
+                      <div class="verifying__type">The receipt for a rent bill</div>
+                      <div class="verifying__file"><a data-mds="docOrder">Front.png</a></div>
+                      <button class="btn cta" data-mds="confirmDelete">Upload new file</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile__verification--footer">
+                <button class="btn cta" disabled="disabled">submit to verification</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 class="panel__header">
+              <svg class="icon">
+                <use xlink:href="#account-icon"></use>
+              </svg><span class="title">Verification </span>
+            </h3>
+            <div class="profile__verification"> 
+              <p>You have to upload the residential address to receive payments will confirm a sva the personality for this purpose load a photo of dopcuments. Files must not have more than <strong>2Mb in .jpg, .png</strong> format</p>
+              <div class="row">
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <div class="verifying verified">
+                      <div class="profile__verification--status success"> 
+                        <svg>
+                          <use xlink:href="#success-icon"></use>
+                        </svg><span>Verified</span>
+                      </div>
+                      <div class="verifying__type">The driver's license from two parts</div>
+                      <div class="verifying__file"><a data-mds="docPhotoFront">Front.png</a></div>
+                      <div class="verifying__file"><a data-mds="docPhotoBack">Back.png </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md__6">
+                  <div class="profile__verification--form">
+                    <div class="verifying verified">
+                      <div class="profile__verification--status success"> 
+                        <svg>
+                          <use xlink:href="#success-icon"></use>
+                        </svg><span>Verified</span>
+                      </div>
+                      <div class="verifying__type">The receipt for a rent bill</div>
+                      <div class="verifying__file"><a data-mds="docOrder">Front.png</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--.profile__verification--footer: button.btn.cta(disabled) submit to verification-->
+            </div>
+          </div>
+        </div>
+        <div class="b__footer">
+          <p>Aisberg will be listed on major exchanges. See details at <a>CoinMarketCap</a> and <a>Block.cc</a></p>
+          <p>Copyright 2018. Aisberg.com <a>Privacy Polycy</a> | <a>Terms & Conditions</a> | <a>F.A.Q.</a> | <a>News</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="docPhotoFront" data-scrollbar="horizontal">
+      <div class="modal__backdrop" data-close="modal"></div>
+      <div class="modal__image">
+        <button class="close" data-close="modal">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </button><img src="https://placeimg.com/640/480/people" alt=""/>
+      </div>
+    </div>
+    <div class="modal" data-modal="docPhotoBack" data-scrollbar="horizontal">
+      <div class="modal__backdrop" data-close="modal"></div>
+      <div class="modal__image">
+        <button class="close" data-close="modal">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </button><img src="https://placeimg.com/1200/2048/nature" alt=""/>
+      </div>
+    </div>
+    <div class="modal" data-modal="docOrder" data-scrollbar="horizontal">
+      <div class="modal__backdrop" data-close="modal"></div>
+      <div class="modal__image">
+        <button class="close" data-close="modal">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </button><img src="https://placeimg.com/1024/768/arch" alt=""/>
+      </div>
+    </div>
+    <div class="modal" data-modal="confirmDelete" data-scrollbar="horizontal">
+      <div class="modal__backdrop" data-close="modal"></div>
+      <div class="modal__confirm">
+        <svg class="modal__confirm--back text__warning">
+          <use xlink:href="#warning-icon"></use>
+        </svg>
+        <button class="close" data-close="modal">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </button>
+        <div class="modal__confirm--body">
+          <h2 class="text__warning">Warning</h2>
+          <p class="text__darkgrey">From troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
+          <div class="btn__group">
+            <div class="btn cta">delete </div>
+            <div class="btn outline" data-close="modal">cancel </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

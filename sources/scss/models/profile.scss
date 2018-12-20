@@ -1,0 +1,227 @@
+.profile {
+
+  &__photo {
+    width: 140px;
+    margin: 0 auto 20px;
+    &--preview {
+      position: relative;
+      height: 0;
+      padding-top: 100%;
+      overflow: hidden;
+      border-radius: 3px 3px 0 0;
+
+      .image {
+        display: block;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .delete {
+        position: absolute;
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: $white;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+
+        svg {
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+        &:hover {
+          color: $cta;
+        }
+      }
+    }
+    &--upload {
+      input {display: none;}
+
+      label {
+        display: block;
+        text-align: center;
+        font-family: $mont;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        transition: all .15s linear;
+        color: $cta;
+        cursor: pointer;
+        padding: 10px 20px;
+        
+        &:hover {
+          color: $dark;
+        }
+        
+
+      }
+    }
+  }
+
+  &__wallet {
+    display: block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  &__phone {
+    margin: 0 -20px 20px;
+    border-bottom: 1px solid $grey;
+    padding: 0 20px;
+
+    &--controls {
+      text-align: center;
+
+      .counter {
+        user-select: none;
+        svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+        span {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__identity {
+    margin: 0 -20px 20px;
+    border-bottom: 1px solid #f1f2f4;
+    padding: 0 20px;
+    &--controls {text-align: center;margin-bottom: -10px;}
+  }
+
+  &__security {
+    h4 {
+      margin-bottom: 10px;
+    }
+    hr {
+      margin: 0 -20px 20px 0;
+      border: none;
+      height: 1px;
+      background-color: $grey;
+    }
+  }
+
+  &__verification {
+    margin-bottom: -20px;
+    &--status {
+      margin-bottom: 20px;
+
+      &.info {color: $info;}
+      &.warning {color: $warning;}
+      &.success {color: $success;}
+      &.danger {color: $danger;}
+
+      span, svg {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
+
+    &--form {
+      border: 1px solid $grey;
+      border-radius: 3px;
+      padding: 20px 20px 0;
+      margin-bottom: 20px;
+
+      h4 {
+        margin-bottom: 10px;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .verifying {
+        border-top: 1px solid $grey;
+        padding: 20px 40px 15px 20px;
+        margin: 0 -20px;
+        position: relative;
+
+        .delete {
+          display: block;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          color: $dark;
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+          &:hover {
+            color: $cta;
+          }
+        }
+
+        .btn.cta {
+          margin-bottom: 5px;
+          margin-top: 5px;
+        }
+        .profile__verification--status {
+          font-size: 11px;
+          font-weight: 700;
+          line-height: 20px;
+          margin-bottom: 10px;
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            margin-top: -3px;
+          }
+
+          span, svg {
+            vertical-align: top;
+          }
+
+          small {
+            display: block;
+            padding-top: 5px;
+            font-size: 11px;
+            line-height: 14px;
+            font-weight: 400;
+          }
+        }
+        &__type {
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        &__file {
+          margin-bottom: 5px;
+        }
+        &.verified {
+          border-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+
+    &--footer {
+      border-top: 1px solid $grey;
+      padding: 20px;
+      margin: 0 -20px;
+      text-align: center;
+    }
+  }
+}
